@@ -19,6 +19,23 @@ VALUES
     (8, 'Smart Home Security Camera', 'Electronics', 79.95, 15, 4.1),
     (9, 'Air Purifier', 'Appliances', 129.50, 35, 4.6),
     
+--Narrowing the list to all that applies in the 4 categories
 SELECT MAX(price), category
 FROM superstore
 GROUP BY category;
+
+--Each category with remaining product in stock
+SELECT stock_quantity, category
+FROM superstore
+GROUP BY category;
+
+--Average rating per category
+SELECT average_rating, category
+FROM superstore
+GROUP BY category;
+
+--Listing Kitchen Supplies by descending price
+SELECT item_name, category, price
+FROM superstore
+WHERE category = "Kitchen Supplies"
+ORDER BY price DESC;

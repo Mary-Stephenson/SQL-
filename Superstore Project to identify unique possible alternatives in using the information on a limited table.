@@ -1,3 +1,5 @@
+Sample of a Store products and queries to see how and what makes it function in the background.
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
